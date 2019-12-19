@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+	.st1{fill:#008B15;}
+	.st2{fill:#D6D6D6;}
+	.st3{fill:url(#SVGID_2_);}
+</style>
+<g id="Group_94_1_" transform="translate(0.5 0.586)">
+	<g id="Path_218_1_">
+		
+			<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-556.2678" y1="334.3332" x2="-555.6298" y2="333.7046" gradientTransform="matrix(36.22 0 0 -20.953 20166.9063 7014.7285)">
+			<stop  offset="0" style="stop-color:#DBDCDD"/>
+			<stop  offset="0.124" style="stop-color:#E1E1E2"/>
+			<stop  offset="0.657" style="stop-color:#F7F7F7"/>
+			<stop  offset="1" style="stop-color:#FFFFFF"/>
+		</linearGradient>
+		<polygon class="st0" points="7.888,16.781 31.904,2.969 55.924,16.948 31.906,30.758 		"/>
+		<path class="st1" d="M31.903,3.258l23.521,13.689L31.906,30.469L8.387,16.782L31.903,3.258 M31.905,2.681L7.389,16.779
+			l24.516,14.268L56.423,16.95L31.905,2.681L31.905,2.681z"/>
+	</g>
+	<g id="Path_219_1_">
+		<polygon class="st2" points="7.639,45.005 7.639,17.218 31.656,31.193 31.656,58.979 		"/>
+		<path class="st1" d="M7.889,17.653l23.517,13.684v27.208L7.889,44.86V17.653 M7.389,16.783v28.365l0.014,0.008l24.504,14.258
+			V31.049L7.389,16.783L7.389,16.783z"/>
+	</g>
+	<g id="Path_220_1_">
+		
+			<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="-544.636" y1="337.697" x2="-544.636" y2="338.5325" gradientTransform="matrix(18.107 0 0 -31.363 9905.8887 10641.8496)">
+			<stop  offset="0.004" style="stop-color:#D0D2D3"/>
+			<stop  offset="0.181" style="stop-color:#E2E3E4"/>
+			<stop  offset="0.404" style="stop-color:#F2F3F3"/>
+			<stop  offset="0.657" style="stop-color:#FCFCFC"/>
+			<stop  offset="1" style="stop-color:#FFFFFF"/>
+		</linearGradient>
+		<polygon class="st3" points="32.16,31.202 56.173,17.382 56.173,45.178 32.16,58.977 		"/>
+		<path class="st1" d="M55.923,17.814v27.219L32.41,58.545V31.347L55.923,17.814 M56.423,16.95L31.92,31.052h-0.01v28.357
+			l24.513-14.086V16.95L56.423,16.95z"/>
+	</g>
+</g>
+</svg>

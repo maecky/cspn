@@ -1,0 +1,45 @@
+<RCC>
+    <qresource prefix="/">
+        <file alias="icons/bitgreen64.png">icons/bitgreen64.png</file>
+        <file>icons/lock-64px.svg</file>
+        <file>icons/page-network-64px.svg</file>
+        <file>icons/page-participate-64px.svg</file>
+        <file>icons/page-rewards-64px.svg</file>
+        <file>icons/page-send-64px.svg</file>
+        <file>icons/page-wallet-64px.svg</file>
+        <file>icons/settings-24px.svg</file>
+        <file>icons/search-24px.svg</file>
+        <file>icons/help-24px.svg</file>
+        <file>icons/news/twitter.png</file>
+        <file>icons/news/medium.png</file>
+        <file>icons/masternode-active-64px.svg</file>
+        <file>icons/masternode-error-64px.svg</file>
+        <file>icons/network-low-64px.svg</file>
+        <file>icons/network-mid-64px.svg</file>
+        <file>icons/network-high-64px.svg</file>
+        <file>icons/bitg-circled-64px.svg</file>
+        <file>icons/get-app-24px.svg</file>
+        <file>icons/error-outline-24px.svg</file>
+        <file>icons/done-24px.svg</file>
+        <file>icons/clear-24px.svg</file>
+        <file>icons/chat-bubble-24px.svg</file>
+        <file>icons/keyboard-right-24px.svg</file>
+        <file>icons/keyboard-left-24px.svg</file>
+        <file>icons/outgoing-24px.svg</file>
+        <file>icons/incoming-24px.svg</file>
+        <file>icons/confirming-24px.svg</file>
+        <file>icons/clock-24px.svg</file>
+        <file>icons/arrow-sub-24px.svg</file>
+        <file>icons/expand-more-24px.svg</file>
+        <file>icons/expand-less-24px.svg</file>
+        <file>icons/import-export-24px.svg</file>
+        <file>icons/cube-active-64px.svg</file>
+        <file>icons/bitg-cloud-64px.svg</file>
+        <file>icons/cube-64px.svg</file>
+        <file>icons/tx-receipt-64px.svg</file>
+        <file>icons/arrow-down-right-64px.svg</file>
+        <file>icons/mining-64px.svg</file>
+        <file>icons/folder-create-24px.svg</file>
+        <file>icons/add-24px.svg</file>
+    </qresource>
+</RCC>

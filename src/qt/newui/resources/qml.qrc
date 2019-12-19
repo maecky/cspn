@@ -1,0 +1,39 @@
+<RCC>
+    <qresource prefix="/">
+        <file alias="maindialog.qml">maindialog.qml</file>
+        <file alias="HomePage.qml">HomePage.qml</file>
+        <file alias="WalletPage.qml">WalletPage.qml</file>
+        <file alias="SendPage.qml">SendPage.qml</file>
+        <file>NetworkPage.qml</file>
+        <file>ParticipatePage.qml</file>
+        <file>RewardsPage.qml</file>
+        <file>SettingsPage.qml</file>
+        <file>DebugPage.qml</file>
+        <file>NewsDelegate.qml</file>
+        <file>WalletOverview.qml</file>
+        <file>ShortTransactionHistory.qml</file>
+        <file>WalletLockOverlay.qml</file>
+        <file>AdvancedTextInput.qml</file>
+        <file>CustomCheckBox.qml</file>
+        <file>SearchOverlay.qml</file>
+        <file>UiItemLink.qml</file>
+        <file>style.js</file>
+        <file>CustomProgressBar.qml</file>
+        <file>MasternodesPage.qml</file>
+        <file>MasternodeDelegate.qml</file>
+        <file>CustomButton.qml</file>
+        <file>CircularProgressBar.qml</file>
+        <file>TransactionHistoryPage.qml</file>
+        <file>ShortTransactionHistoryDelegate.qml</file>
+        <file>CustomSwitch.qml</file>
+        <file>HoverButton.qml</file>
+        <file>config.js</file>
+        <file>CustomCalendar.qml</file>
+        <file>TransactionRecordDelegate.qml</file>
+        <file>CheckButton.qml</file>
+        <file>AddressFolderList.qml</file>
+        <file>AddressFolderDelegate.qml</file>
+        <file>AddressList.qml</file>
+        <file>AddressListDelegate.qml</file>
+    </qresource>
+</RCC>

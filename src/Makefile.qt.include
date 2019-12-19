@@ -384,6 +384,38 @@ BITCOIN_QT_WALLET_CPP = \
 BITCOIN_QT_WALLET_BIP70_CPP = \
   qt/paymentrequestplus.cpp
 
+BITCOIN_QT_NEWUI_RES = \
+  qt/newui/resources/qml.qrc    \
+  qt/newui/resources/icons.qrc
+
+BITCOIN_QT_NEWUI = \
+  qt/newui/bitgreen-qt-qml.cpp  \
+  qt/newui/web-resources.cpp    \
+  qt/newui/config.cpp           \
+  qt/newui/debugconsole.cpp     \
+  qt/newui/clipboardproxy.cpp   \
+  qt/newui/masternodelist.cpp   \
+  qt/newui/clientmodel.cpp      \
+  qt/newui/ui-core.cpp          \
+  qt/newui/walletmodel.cpp      \
+  qt/newui/walletcontroller.cpp \
+  qt/newui/transactionmodel.cpp \
+  qt/newui/svgimageprovider.cpp \
+  qt/newui/addresslistmodel.cpp \
+  qt/newui/bitgreen-qt-qml.h    \
+  qt/newui/web-resources.h      \
+  qt/newui/config.h             \
+  qt/newui/debugconsole.h       \
+  qt/newui/clipboardproxy.h     \
+  qt/newui/masternodelist.h     \
+  qt/newui/clientmodel.h        \
+  qt/newui/ui-core.h            \
+  qt/newui/walletmodel.h        \
+  qt/newui/walletcontroller.h   \
+  qt/newui/transactionmodel.h   \
+  qt/newui/svgimageprovider.h   \
+  qt/newui/addresslistmodel.h
+
 BITCOIN_QT_CPP = $(BITCOIN_QT_BASE_CPP)
 if TARGET_WINDOWS
 BITCOIN_QT_CPP += $(BITCOIN_QT_WINDOWS_CPP)
@@ -394,6 +426,9 @@ if ENABLE_BIP70
 BITCOIN_QT_CPP += $(BITCOIN_QT_WALLET_BIP70_CPP)
 endif # ENABLE_BIP70
 endif # ENABLE_WALLET
+
+BITCOIN_QT_CPP += $(BITCOIN_QT_NEWUI_RES)
+BITCOIN_QT_CPP += $(BITCOIN_QT_NEWUI)
 
 RES_IMAGES = \
   qt/res/images/about.png \
@@ -459,7 +494,7 @@ qt_bitgreen_qt_LDADD += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
 endif
 qt_bitgreen_qt_LDADD += $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) $(LIBBITCOIN_CONSENSUS) $(LIBBITCOIN_CRYPTO) $(LIBUNIVALUE) $(LIBLEVELDB) $(LIBLEVELDB_SSE42) $(LIBMEMENV) \
   $(BOOST_LIBS) $(QT_LIBS) $(QT_DBUS_LIBS) $(QR_LIBS) $(PROTOBUF_LIBS) $(BDB_LIBS) $(MINIUPNPC_LIBS) $(LIBSECP256K1) \
-  $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(BLS_LIBS)
+  $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(BLS_LIBS)  -lqtcore -lqtgui -lqtsvg -lqtxml -lqtquick -lqtqml -lqtquickcontrols2
 if ENABLE_BIP70
 qt_bitgreen_qt_LDADD += $(SSL_LIBS)
 else
