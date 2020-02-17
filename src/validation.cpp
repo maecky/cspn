@@ -1067,8 +1067,8 @@ bool ReadRawBlockFromDisk(std::vector<uint8_t>& block, const CBlockIndex* pindex
 
 CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams, bool fSuperblockPartOnly)
 {
-    if (Params().NetworkIDString() == "regtest")
-        return 50 * COIN;
+    if (Params().NetworkIDString() == "regtest" || Params().NetworkIDString() == "testnet")
+        return 5000 * COIN;
 
     /*
     1 - old chain supply: 9,851,721

@@ -280,12 +280,12 @@ public:
         consensus.BIP66Height = 200;
         consensus.powLimit = uint256S("00000ffff0000000000000000000000000000000000000000000000000000000");
         consensus.nPowTargetTimespan = 14 * 24 * 60 * 60; // two weeks
-        consensus.nPowTargetSpacing = 1 * 60;
+        consensus.nPowTargetSpacing = 10;
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.fPowNoRetargeting = false;
-        consensus.nPosTargetSpacing = 2 * 60; // PoS: 2 minutes
-        consensus.nPosTargetTimespan = 60 * 40;
-        consensus.nStakeMinAge = 60 * 10; // 10 minutes
+        consensus.nPosTargetSpacing = consensus.nPowTargetSpacing;
+        consensus.nPosTargetTimespan = consensus.nPowTargetTimespan;
+        consensus.nStakeMinAge = 10;
         consensus.nStakeMaxAge = 60 * 60; // 1 hour
         consensus.nModifierInterval = 60; // Modifier interval: time to elapse before new modifier is computed (1 minute)
         consensus.nLastPoWBlock = 200;
@@ -335,20 +335,23 @@ public:
         m_assumed_blockchain_size = 1;
         m_assumed_chain_state_size = 0;
 
-        genesis = CreateGenesisBlock(1565017975, 21212214, 0x1e0ffff0, 1, 0 * COIN);
+        uint32_t nNonce = 0;
+        while (UintToArith256(genesis.GetHash()) > UintToArith256(consensus.powLimit)) {
+           nNonce++;
+           genesis = CreateGenesisBlock(1581947500, nNonce, 0x1e0ffff0, 1, 0 * COIN);
+           printf("\r%08x", nNonce);
+        }
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x00000546a6b03a54ae05f94119e37c55202e90a953058c35364d112d41ded06a"));
-        assert(genesis.hashMerkleRoot == uint256S("0x07cbcacfc822fba6bbeb05312258fa43b96a68fc310af8dfcec604591763f7cf"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 98);
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 12);
-        base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 108);
-        base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x35, 0x87, 0xCF};
-        base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x35, 0x83, 0x94};
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 38);
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 6);
+        base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 46);
+        base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x88, 0xB2, 0x1E};
+        base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x88, 0xAD, 0xE4};
 
         bech32_hrp = "tbg";
 
