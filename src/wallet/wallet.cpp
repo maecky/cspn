@@ -3041,7 +3041,7 @@ bool CWallet::CreateTransaction(interfaces::Chain::Lock& locked_chain, const std
 
             // Create change script that will be used if we need change
             // TODO: pass in scriptChange instead of reservedest so
-            // change transaction isn't always pay-to-bitgreen-address
+            // change transaction isn't always pay-to-cspn-address
             CScript scriptChange;
 
             // coin control: send change to custom address
@@ -5294,7 +5294,7 @@ bool CWallet::CreateCoinStake(unsigned int nBits,
                 uint64_t nTotalSize = pcoin.first->tx->vout[pcoin.second].nValue + nFees + GetBlockSubsidy(pIndex0->nHeight, Params().GetConsensus());
 
                 //presstab HyperStake - if MultiSend is set to send in coinstake we will add our outputs here (values asigned further down)
-                // TODO: BitGreen - check if threshold split conflicts with masternode payment.
+                // TODO: CSPN - check if threshold split conflicts with masternode payment.
                 if (nStakeSplitThreshold >= 100 && nTotalSize / 2 > nStakeSplitThreshold * COIN)
                     txNew.vout.push_back(CTxOut(0, scriptPubKeyOut)); //split stake
 

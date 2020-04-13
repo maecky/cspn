@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_VERSION_H
-#define BITGREEN_VERSION_H
+#ifndef CSPN_VERSION_H
+#define CSPN_VERSION_H
 
 /**
  * network protocol versioning
@@ -45,4 +45,4 @@ static const int INVALID_CB_NO_BAN_VERSION = 70016;
 //! introduction of LLMQs
 static const int LLMQS_PROTO_VERSION = 70016;
 
-#endif // BITGREEN_VERSION_H
+#endif // CSPN_VERSION_H
