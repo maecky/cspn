@@ -435,6 +435,14 @@ QScrollBar:right-arrow {
     height: 10px;
 }
 
+/*******************************/
+/* SPLIT BLOCK CHECK BOX       */
+/*******************************/
+
+QDialog#SendCoinsDialog .QFrame#frameCoinControl .QCheckBox#splitBlockCheckBox {
+    color:#ffffff;
+}
+
 
 /*******************************************************/
 
