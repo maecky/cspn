@@ -1083,9 +1083,9 @@ CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams, b
     if (nHeight == 1)
         return 9851721 * COIN;
 
-    if (nHeight <= 7500)
+    if (nHeight <= 510)
         return 0 * COIN;
-    else if (nHeight > 7500 && nHeight <= 1051200)
+    else if (nHeight > 510 && nHeight <= 1051200)
         nSubsidy = 2.8 * COIN;
     else if (nHeight > 1051200 && nHeight <= 1576800)
         nSubsidy = 2.61 * COIN;
@@ -1107,7 +1107,7 @@ CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams, b
         nSubsidy = 1.5 * COIN;
 
     // Check if we reached the coin max supply.
-    int64_t nMoneySupply = ChainActive().Tip()->nMoneySupply;
+    CAmount nMoneySupply = ChainActive().Tip()->nMoneySupply;
 
     if (nMoneySupply + nSubsidy >= MAX_MONEY)
         nSubsidy = MAX_MONEY - nMoneySupply;

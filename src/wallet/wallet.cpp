@@ -5553,7 +5553,7 @@ bool CWallet::CreateCoinStake(unsigned int nBits,
     // Calculate reward
     CAmount nReward;
     const CBlockIndex* pIndex0 = ChainActive().Tip();
-    nReward = nFees + GetBlockSubsidy(pIndex0->nHeight, Params().GetConsensus());
+    nReward = nFees + GetBlockSubsidy(pIndex0->nHeight+1, Params().GetConsensus());
     nCredit += nReward;
 
     CAmount nMinFee = 0;
@@ -5590,7 +5590,7 @@ bool CWallet::CreateCoinStake(unsigned int nBits,
     // get some info back to pass to getblocktemplate
     FillBlockPayments(txNew, pIndex0->nHeight+1, nReward, voutMasternodePayments, voutSuperblockPayments);
     LogPrintf("CreateNewBlock -- nBlockHeight %d blockReward %lld coinbaseTx %s",
-                pIndex0->nHeight+1, nReward, CTransaction(txNew).ToString());
+              pIndex0->nHeight+1, nReward, CTransaction(txNew).ToString());
 
     // Sign
     int nIn = 0;
