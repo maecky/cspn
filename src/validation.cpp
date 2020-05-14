@@ -1077,7 +1077,7 @@ CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams, b
     if (nHeight == 1)
         return 9851721 * COIN;
 
-    if (nHeight <= 7500)
+    if (nHeight <= 510)
         return 0 * COIN;
 
     CAmount nSubsidy = 10 * COIN;
