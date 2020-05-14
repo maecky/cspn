@@ -53,8 +53,8 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
  */
 static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
-    const char* pszTimestamp = "Even With Energy Surplus, Canada Unable to Meet Electricity Demands of Bitcoin Miners";
-    const CScript genesisOutputScript = CScript() << ParseHex("04e5a8143f86ad8ac63791fbbdb8e0b91a8da88c8c693a95f6c2c13c063ea790f7960b8025a9047a7bc671d5cfe707a2dd2e13b86182e1064a0eea7bf863636363") << OP_CHECKSIG;
+    const char* pszTimestamp = "112018 Bitcoin has hit below $4225 USD 12mo Low";
+    const CScript genesisOutputScript = CScript() << ParseHex("04e5a8143f86ad8ac63791fbbdb8e0b9111da88c8c693a2222c2c13c063ea790f7960b8025a9047a7bc671d5cfe707a2dd2e13b86182e1064a0eea7bf863636363") << OP_CHECKSIG;
     return CreateGenesisBlock(pszTimestamp, genesisOutputScript, nTime, nNonce, nBits, nVersion, genesisReward);
 }
 
@@ -152,12 +152,12 @@ public:
         consensus.nPowTargetSpacing = 1 * 60;
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
-        consensus.nPosTargetSpacing = 2 * 60; // PoS: 2 minutes
+        consensus.nPosTargetSpacing = 1 * 60; // PoS: 2 minutes
         consensus.nPosTargetTimespan = 60 * 40;
-        consensus.nStakeMinAge = 60 * 60 * 12; // 12 hours
+        consensus.nStakeMinAge = 60 * 60; // 1 hours
         consensus.nStakeMaxAge = 60 * 60 * 48; // 48 hours
         consensus.nModifierInterval = 60;      // Modifier interval: time to elapse before new modifier is computed (60 seconds)
-        consensus.nLastPoWBlock = 1500;
+        consensus.nLastPoWBlock = 500;
         consensus.nRuleChangeActivationThreshold = 1916; // 95% of 2016
         consensus.nMinerConfirmationWindow = 2016;       // nPowTargetTimespan / nPowTargetSpacing
         consensus.nMasternodeMinimumConfirmations = 15;
@@ -199,19 +199,19 @@ public:
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 32-bit integer with any alignment.
          */
-        pchMessageStart[0] = 0xe4;
-        pchMessageStart[1] = 0xa4;
-        pchMessageStart[2] = 0x06;
-        pchMessageStart[3] = 0x1f;
-        nDefaultPort = 9333;
+        pchMessageStart[0] = 0xd4;
+        pchMessageStart[1] = 0xf4;
+        pchMessageStart[2] = 0xa6;
+        pchMessageStart[3] = 0x12;
+        nDefaultPort = 13370;
         nPruneAfterHeight = 100000;
         m_assumed_blockchain_size = 1;
         m_assumed_chain_state_size = 0;
 
-        genesis = CreateGenesisBlock(1574334000, 27296764, 0x1e0ffff0, 1, 0 * COIN);
+        genesis = CreateGenesisBlock(1589325396, 27964304, 0x1e0ffff0, 1, 0 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x0000025289d6b03cbda4950e825cd865185f34fbb3e098295534b63d78beba15"));
-        assert(genesis.hashMerkleRoot == uint256S("0x07cbcacfc822fba6bbeb05312258fa43b96a68fc310af8dfcec604591763f7cf"));
+        //assert(consensus.hashGenesisBlock == uint256S("0x0000025289d6b03cbda4950e825cd865185f34fbb3e098295534b63d78beba15"));
+        //assert(genesis.hashMerkleRoot == uint256S("0x07cbcacfc822fba6bbeb05312258fa43b96a68fc310af8dfcec604591763f7cf"));
 
         // Note that of those which support the service bits prefix, most only support a subset of
         // possible options.
@@ -248,17 +248,14 @@ public:
         nMinSporkKeys = 1;
 
         checkpointData = {
-            {
-                {   1, uint256S("0x0000062cf9ac97b1582474e313770e4609c338ed6fae01142da65722353465f3")},
-                { 100, uint256S("0x000005faf4d7d9dccd3a1986eb7150a22f21f80664d5deb91cb1ca38eb305e7e")}
-            }};
+            {}};
 
         chainTxData = ChainTxData{
             // Data from rpc: getchaintxstats <nblock> <blockhash>
             // Data from RPC: getchaintxstats 101 000002cb0a69c6c59778e62ce84d2af1da87a5c05a3b9c9ba0c10a1f28b50312
-            /* nTime    */ 1574436943,
-            /* nTxCount */ 166,
-            /* dTxRate  */ 0.008734543541173376};
+            /* nTime    */ 0,
+            /* nTxCount */ 0,
+            /* dTxRate  */ 0};
     }
 };
 
