@@ -213,7 +213,6 @@ public:
     UnlockContext requestUnlock();
 
     bool getPubKey(const CKeyID &address, CPubKey& vchPubKeyOut) const;
-    bool isMine(CTxDestination address);
     bool havePrivKey(const CKeyID &address) const;
     bool havePrivKey(const CScript& script) const;
     bool getPrivKey(const CKeyID &address, CKey& vchPrivKeyOut) const;

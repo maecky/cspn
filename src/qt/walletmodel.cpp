@@ -690,10 +690,3 @@ bool WalletModel::isMultiwallet()
 {
     return m_node.getWallets().size() > 1;
 }
-
-
-bool WalletModel::isMine(CTxDestination address)
-{
-    auto wallet = GetMainWallet();
-    return IsMine(*wallet, address);
-}
