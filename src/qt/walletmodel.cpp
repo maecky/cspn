@@ -694,6 +694,11 @@ bool WalletModel::isMultiwallet()
 
 bool WalletModel::isMine(CTxDestination address)
 {
-    auto wallet = GetMainWallet();
-    return IsMine(*wallet, address);
+    std::vector<std::shared_ptr<CWallet>> wallets = GetWallets();
+    for (auto & pwallet : wallets) {
+        if(IsMine(*pwallet, address) == true) {
+            return true;
+        }
+    }
+    return false;
 }
